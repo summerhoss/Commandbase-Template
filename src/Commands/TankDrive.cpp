@@ -1,32 +1,34 @@
-#include "ExampleCommand.h"
+#include "TankDrive.h"
 
-ExampleCommand::ExampleCommand() {
+TankDrive::TankDrive() {
 	// Use Requires() here to declare subsystem dependencies
 	// eg. Requires(Robot::chassis.get());
+	Requires(drive);
 }
 
 // Called just before this Command runs the first time
-void ExampleCommand::Initialize() {
+void TankDrive::Initialize() {
 
 }
 
 // Called repeatedly when this Command is scheduled to run
-void ExampleCommand::Execute() {
-
+void TankDrive::Execute() {
+	//double yLeftRaw = oi->getDriveStickLeft()->GetY();
+	//double yRightRaw = oi->getDriveStickRight()->GetY();
 }
 
 // Make this return true when this Command no longer needs to run execute()
-bool ExampleCommand::IsFinished() {
+bool TankDrive::IsFinished() {
 	return false;
 }
 
 // Called once after isFinished returns true
-void ExampleCommand::End() {
+void TankDrive::End() {
 
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
-void ExampleCommand::Interrupted() {
+void TankDrive::Interrupted() {
 
 }
