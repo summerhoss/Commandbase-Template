@@ -1,6 +1,7 @@
 #include "DriveTrain.h"
 #include "RobotMap.h"
 #include <WPIlib.h>
+#include "../Commands/TankDrive.h"
 
 DriveTrain::DriveTrain() : Subsystem("DriveTrain"), leftMotor(new Talon(PORT)), rightMotor(new Talon(PORT2))
 {
@@ -10,6 +11,7 @@ DriveTrain::DriveTrain() : Subsystem("DriveTrain"), leftMotor(new Talon(PORT)), 
 void DriveTrain::InitDefaultCommand()
 {
 	SetDefaultCommand(new TankDrive());
+
 	// Set the default command for a subsystem here.
 	// SetDefaultCommand(new MySpecialCommand());
 }
